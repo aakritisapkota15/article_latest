@@ -3,6 +3,18 @@
 ## Base URL
 The base URL of the API is dynamically set using the server's environment:
 - 
+https://article-latest.vercel.app/
+
+My live endpoints:
+https://article-latest.vercel.app/articlespage
+
+https://article-latest.vercel.app/articles?category=AI
+
+https://article-latest.vercel.app/articles?minDate=2024-11-17
+
+https://article-latest.vercel.app/article/1
+
+https://article-latest.vercel.app/articles
 
 ---
 
