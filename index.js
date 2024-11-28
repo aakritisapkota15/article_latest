@@ -29,16 +29,19 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   //res.send("Hello World");
   res.render("about");
+
   //res.sendFile(path.join(__dirname, "views", "about.html"));
 });
 
 app.get("/articles/add", (req, res) => {
   res.render("addArticle");
+
   //res.sendFile(path.join(__dirname, "views", "addArticle.html"));
 });
 
 app.get("/articlespage", (req, res) => {
   res.render("articles");
+
   //res.sendFile(path.join(__dirname, "views", "articles.html"));
 });
 
@@ -101,6 +104,7 @@ app.get("/articles", (req, res) => {
       .getArticlesByMinDate(req.query.minDate)
       .then((articles) => {
         res.render("articles", { articles });
+
         //res.json(articles);
       })
       .catch((err) => res.status(404).json({ message: err }));
@@ -119,6 +123,7 @@ app.get("/article/:id", (req, res) => {
     .getArticleById(req.params.id)
     .then((article) => {
       //res.json(article);
+
       res.render("article", { article });
     })
     .catch((err) => res.status(404).json({ message: err }));
