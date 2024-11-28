@@ -23,6 +23,43 @@ https://article-latest.vercel.app/articles
 
 ---
 
+# Project Description
+
+A brief description of your project, for example: "Article Management Application"
+This application allows users to manage articles and categories, with features like adding articles, filtering articles by category, viewing individual articles, and displaying article metadata.
+
+## Revisions Made
+
+1. **Integrated EJS Templating**
+
+   - Refactored HTML files to use EJS for dynamic rendering.
+   - Updated routes to render views with data.
+
+2. **Articles View**
+
+   - Added `articles.ejs` to display articles in a table format.
+   - Implemented category filtering and error handling for no data.
+
+3. **Add Article**
+
+   - Updated `addArticle.ejs` to populate the category dropdown dynamically.
+
+4. **Categories View**
+
+   - Created `categories.ejs` to display categories in a table.
+
+5. **Individual Article View**
+
+   - Added `article.ejs` to show detailed article information.
+   - Included feature image, description, and error handling for unpublished articles.
+
+6. **Content-Service Updates**
+
+   - Modified functions to include category names and improve data handling.
+
+7. **Styling Improvements**
+   - Updated `styles.css` for better table layouts and responsive design.
+
 ## Endpoints
 
 ### **GET** `/articles`
