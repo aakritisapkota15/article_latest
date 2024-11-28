@@ -123,7 +123,6 @@ app.get("/article/:id", (req, res) => {
     .getArticleById(req.params.id)
     .then((article) => {
       //res.json(article);
-
       res.render("article", { article });
     })
     .catch((err) => res.status(404).json({ message: err }));
