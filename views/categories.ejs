@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles Management</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Articles Management</h1>
+    </header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/articles">Articles Page</a>
+      <a href="/categories"> Categories</a>
+      <a href="/articles/add">Add Article</a>
+    </nav>
+
+    <div class="categories-container">
+      <h1>Categories</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% categories.forEach((category, index) => { %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= category %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <p>&copy; 2024 Articles Management</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles Management</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Articles Management</h1>
+    </header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/articles">Articles Page</a>
+      <a href="/categories"> Categories</a>
+      <a href="/articles/add">Add Article</a>
+    </nav>
+
+    <div class="article-container">
+      <h1><%= article.title %></h1>
+
+      <% if (article[0].featureImage) { %>
+      <div class="article-image">
+        <img
+          src="<%= article[0].featureImage %>"
+          alt="<%= article[0].title %>"
+          style="width: 300px; height: auto"
+        />
+      </div>
+      <% } %>
+
+      <div class="article-details">
+        <p>
+          <strong>Author:</strong> <%= article[0].authorName || 'Unknown' %>
+        </p>
+        <p>
+          <strong>Category:</strong> <%= article[0].category || 'Uncategorized'
+          %>
+        </p>
+        <p><strong>Article Date:</strong> <%= article[0].articleDate %></p>
+        <p>
+          <strong>Published:</strong> <%= article[0].published ? 'Yes' : 'No' %>
+        </p>
+      </div>
+
+      <div class="article-description">
+        <p><%= article[0].description %></p>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Articles Management</p>
+    </footer>
+  </body>
+</html>

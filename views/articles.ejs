@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles Management</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Articles Management</h1>
+    </header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/articles">Articles Page</a>
+      <a href="/categories"> Categories</a>
+      <a href="/articles/add">Add Article</a>
+    </nav>
+
+    <div class="container">
+      <h2>Articles</h2>
+
+      <% if (!articles || articles.length === 0) { %>
+      <p class="error">No articles found!</p>
+      <% } else { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Published</th>
+            <th>Category</th>
+            <th>Article Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% articles.forEach(article => { %>
+          <tr>
+            <td>
+              <a href="/article/<%= article.id %>"><%= article.title %></a>
+            </td>
+            <td><%= article.authorName || 'N/A' %></td>
+            <td><%= article.published ? 'Yes' : 'No' %></td>
+            <td>
+              <a href="/articles?category=<%= article.category %>"
+                ><%= article.category %></a
+              >
+            </td>
+            <td><%= article.articleDate %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <% } %>
+    </div>
+    <footer>
+      <p>&copy; 2024 Articles Management</p>
+    </footer>
+  </body>
+</html>

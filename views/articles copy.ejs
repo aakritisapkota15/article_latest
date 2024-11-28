@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles Management</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Articles Management</h1>
+    </header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/articlespage">Articles Page</a>
+      <a href="/articles/add">Add Article</a>
+    </nav>
+
+    <div class="container">
+      <h2>Articles</h2>
+      <div id="filters">
+        <label for="category">Filter by Category:</label>
+        <select id="category">
+          <option value="">Loading categories...</option>
+        </select>
+        <button id="filterByCategory">Filter</button>
+        <br /><br />
+        <label for="minDate">Filter after this Date:</label>
+        <input type="date" id="minDate" />
+        <button id="filterByDate">Filter</button>
+        <br /><br />
+        <label for="articleId">Get Article by ID:</label>
+        <input type="text" id="articleId" placeholder="Enter Article ID" />
+        <button id="getArticleById">Fetch Article</button>
+      </div>
+      <ul id="articlesList"></ul>
+      <div id="articleDetails"></div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Articles Management</p>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>
