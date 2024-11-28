@@ -93,6 +93,7 @@ app.post("/articles/add", upload.single("featureImage"), (req, res) => {
   }
 });
 
+//modifying the routes to  support article.ejs articles.ejs and /:id & category filter
 app.get("/articles", (req, res) => {
   if (req.query.category) {
     contentService
