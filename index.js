@@ -127,7 +127,7 @@ app.get("/article/:id", (req, res) => {
     })
     .catch((err) => res.status(404).json({ message: err }));
 });
-
+// Changing the Id to category name
 // addded new route for categories
 app.get("/categories", (req, res) => {
   contentService.getAllCategories().then((categories) => {
