@@ -128,6 +128,7 @@ app.get("/article/:id", (req, res) => {
     .catch((err) => res.status(404).json({ message: err }));
 });
 
+// addded new route for categories
 app.get("/categories", (req, res) => {
   contentService.getAllCategories().then((categories) => {
     //res.json(categories);
