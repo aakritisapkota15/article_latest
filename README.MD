@@ -25,7 +25,7 @@ https://article-latest.vercel.app/articles
 
 # Project Description
 
-A brief description of your project, for example: "Article Management Application"
+A brief description of the project, "Article Management Application"
 This application allows users to manage articles and categories, with features like adding articles, filtering articles by category, viewing individual articles, and displaying article metadata.
 
 ## Revisions Made
@@ -80,19 +80,12 @@ This application allows users to manage articles and categories, with features l
   ]
   ```
 
-Here’s a concise README.md focused solely on the API:
-
-markdown
-Copy code
-
 # API Documentation
 
 ## Base URL
 
-The base URL of the API is dynamically set using the server's environment:
-
-- Example: `https://your-deployed-app.vercel.app`
-
+The base URL of the API is dynamically set using the server's host provider.
+It can be: https://yourwebsite.com/
 ---
 
 ## Endpoints
