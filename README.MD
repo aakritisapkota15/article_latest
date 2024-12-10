@@ -79,13 +79,6 @@ This application allows users to manage articles and categories, with features l
     }
   ]
   ```
-
-# API Documentation
-
-## Base URL
-
-The base URL of the API is dynamically set using the server's host provider.
-It can be: https://yourwebsite.com/
 ---
 
 ## Endpoints
